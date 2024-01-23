@@ -1,8 +1,5 @@
 -- 4-first_table.sql
 
--- Use the specified database
-USE hbtn_0c_0;
-
 -- Check if the table already exists
 CREATE TABLE IF NOT EXISTS first_table (
     id INT,
