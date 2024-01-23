@@ -1,4 +1,4 @@
--- create_database_and_tables.sql
+-- create_database_and_mysql
 
 -- Create a new database
 CREATE DATABASE IF NOT EXISTS `holbteron_0`;
