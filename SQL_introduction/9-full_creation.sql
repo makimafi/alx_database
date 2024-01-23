@@ -1,5 +1,4 @@
--- cat 9-full_creation.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-
+-- 9-full_creation_without_comments.sql
 
 -- Use the specified database
 USE hbtn_0c_0;
