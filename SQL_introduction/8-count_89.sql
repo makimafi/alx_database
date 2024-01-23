@@ -4,4 +4,4 @@ USE hbtn_0c_0;
 
 SELECT COUNT(*) AS count_89
 FROM first_table
-WHERE id = 89;
+WHERE id = Holberton School;
