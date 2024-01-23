@@ -1,6 +1,14 @@
 -- 4-first_table.sql
 
 
+USE `hbtn_0c_0`;
+
+CREATE TABLE IF NOT EXISTS `first_table` (
+    `id` INT,
+    `name` VARCHAR(256)
+);
+
+
 -- Set the database name based on the argument passed to the mysql command
 USE `?`;
 
