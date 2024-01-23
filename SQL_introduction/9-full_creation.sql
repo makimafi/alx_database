@@ -1,28 +1,26 @@
---#!/bin/bash
+-- 9-full_creation.sql
 
-# Check if the correct number of arguments is provided
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <database_name>"
-    exit 1
-fi
+-- Use the specified database
+USE hbtn_0c_0;
 
-# Database name passed as an argument
-db_name="$1"
+-- Check if the table already exists
+SET @table_exists = (SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'second_table');
 
-# MySQL credentials
-mysql_user="your_mysql_username"
-mysql_password="your_mysql_password"
+-- Create the table only if it doesn't exist
+DO IF @table_exists = 0 THEN
+    CREATE TABLE second_table (
+        id INT,
+        name VARCHAR(256),
+        score INT
+    );
+END IF;
 
-# Create table and insert records
-mysql -u "$mysql_user" -p"$mysql_password" "$db_name" <<EOF
-CREATE TABLE IF NOT EXISTS second_table (
-    id INT,
-    name VARCHAR(256),
-    score INT
-);
+-- Insert records into the table
+INSERT INTO second_table (id, name, score) VALUES
+    (1, 'John', 10),
+    (2, 'Alex', 3),
+    (3, 'Bob', 14),
+    (4, 'George', 8);
 
-INSERT INTO second_table (id, name, score) VALUES (1, 'John', 10);
-INSERT INTO second_table (id, name, score) VALUES (2, 'Alex', 3);
-INSERT INTO second_table (id, name, score) VALUES (3, 'Bob', 14);
-INSERT INTO second_table (id, name, score) VALUES (4, 'George', 8);
-EOF
+-- Informative message
+SELECT 'Table second_table created or already exists, and records inserted.' AS 'Result';
