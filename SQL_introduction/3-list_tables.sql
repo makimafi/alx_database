@@ -1,8 +1,8 @@
 -- create_database_and_tables.sql
 
 -- Create a new database
-CREATE DATABASE IF NOT EXISTS `your_database_name`;
-USE `your_database_name`;
+CREATE DATABASE IF NOT EXISTS `mysql`;
+USE `mysql`;
 
 -- Create three tables
 CREATE TABLE IF NOT EXISTS `table1` (
