@@ -1,5 +1,3 @@
--- Create the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
+-- list_databases.sql
 
--- Switch to the hbtn_0c_0 database
-USE hbtn_0c_0;
+SHOW DATABASES;
