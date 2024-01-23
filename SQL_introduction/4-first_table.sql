@@ -1,4 +1,5 @@
--- create_first_table.sql
+-- 4-first_table.sql
+
 
 -- Set the database name based on the argument passed to the mysql command
 USE `?`;
