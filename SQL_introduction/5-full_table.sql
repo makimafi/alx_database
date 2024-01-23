@@ -1,4 +1,4 @@
-SET @db_name = ?;
+--SET @db_name = ?;
 SET @table_name = 'first_table';
 
 SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
