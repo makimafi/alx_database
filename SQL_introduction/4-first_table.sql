@@ -2,6 +2,13 @@
 
 USE `hbtn_0c_0`;
 
+
+
+CREATE TABLE IF NOT EXISTS `first_table` (
+    `id` INT,
+    `name` VARCHAR(256)
+);
+
 -- Check if the table exists
 IF NOT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'hbtn_0c_0' AND table_name = 'first_table') THEN
 
