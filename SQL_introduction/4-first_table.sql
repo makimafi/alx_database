@@ -9,7 +9,7 @@ CREATE TABLE `first_table` (
 -- Check for errors
 SELECT
     CASE
-        WHEN errno = 1050 THEN 'Table already exists'
+        WHEN errno = 1146 THEN 'Table doesn’t exist'
         ELSE 'Unknown error'
     END AS message
 FROM
